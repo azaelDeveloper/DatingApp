@@ -13,8 +13,10 @@
           </li>          
         </ul>
         <div class="dropdown" *ngIf="accountService.currentUser$ | async" dropdown>
-          <a class="dropdown-toggle text-light text-decoration-none" href="#" dropdownToggle>Welcome User! </a>
-          <div class="dropdown-menu" *dropdownMenu="">
+          <a class="dropdown-toggle text-light text-decoration-none"
+           href="#" dropdownToggle>Welcome {{model.username}}! </a>
+          
+           <div class="dropdown-menu" *dropdownMenu="">
             <a class="dropdown-item">Edit Profile</a>
             <a class="dropdown-item" (click)="logOut()">Logout</a>
           </div>
